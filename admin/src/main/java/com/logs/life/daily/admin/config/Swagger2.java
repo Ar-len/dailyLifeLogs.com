@@ -19,8 +19,8 @@ public class Swagger2 {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(apiInfo())
 				.select()
-			    .apis(RequestHandlerSelectors.basePackage("com.zimug.bootlaunch"))
-				.paths(PathSelectors.regex("/rest/.*"))
+			    .apis(RequestHandlerSelectors.basePackage("com.logs.life.daily.admin"))
+				.paths(PathSelectors.regex("/logs/.*"))
 				.build();
 	}
 	
