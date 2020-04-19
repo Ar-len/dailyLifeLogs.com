@@ -9,4 +9,4 @@ spring:
     password: 123456
 mybatis:
   mapper-locations: classpath:mapper/*/*.xml
-  type-aliases-package: com.example.demo34.mapper
+  type-aliases-package: com.dailylifelogs.web.model

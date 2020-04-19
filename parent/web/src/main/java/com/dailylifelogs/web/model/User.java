@@ -1,5 +1,7 @@
 package com.dailylifelogs.web.model;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
 import java.io.Serializable;
 
 /**
