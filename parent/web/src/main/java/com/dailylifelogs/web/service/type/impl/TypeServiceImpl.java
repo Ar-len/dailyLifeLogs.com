@@ -1,5 +1,7 @@
 package com.dailylifelogs.web.service.type.impl;
 
+import ajaxResponse.CustomException;
+import ajaxResponse.CustomExceptionType;
 import com.dailylifelogs.web.mapper.type.TypeMapper;
 import com.dailylifelogs.web.model.Type;
 import com.dailylifelogs.web.model.TypeExample;
@@ -16,8 +18,6 @@ public class TypeServiceImpl implements TypeService {
 
     @Override
     public List<Type> selectByExample(TypeExample example) {
-        System.out.println(typeMapper.toString());
-        System.out.println(typeMapper.selectByExample(example));
         return typeMapper.selectByExample(example);
     }
 }

@@ -21,6 +21,11 @@
     </modules>
     <!--子模块共享dependent-->
     <dependencies>
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <!--dozer-->
         <dependency>
             <groupId>net.sf.dozer</groupId>

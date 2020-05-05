@@ -4,8 +4,7 @@ import com.dailylifelogs.web.model.Type;
 import com.dailylifelogs.web.model.TypeExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-
-public interface TypeMapper {
+public interface TypeMapper{
     long countByExample(TypeExample example);
 
     int deleteByExample(TypeExample example);
