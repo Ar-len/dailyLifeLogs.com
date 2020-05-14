@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisGeneratorConfiguration">
+    <option name="credentials">
+      <map>
+        <entry key="jdbc:mysql:///daily_life_logs_base?characterEncoding=utf8&amp;useAffectedRows=true&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Shanghai">
+          <value>
+            <Credential>
+              <option name="username" value="root" />
+            </Credential>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql:///daily_life_logs_base?characterEncoding=utf8&amp;useSSL=false&amp;useAffectedRows=true&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Shanghai">
+          <value>
+            <Credential>
+              <option name="username" value="root" />
+            </Credential>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://localhost:3306/daily_life_logs_base?characterEncoding=utf8&amp;useAffectedRows=true&amp;allowMultiQueries=true&amp;serverTimezone=Asia/Shanghai">
+          <value>
+            <Credential>
+              <option name="username" value="root" />
+            </Credential>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://localhost:3306/daily_life_logs_base?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone = GMT">
+          <value>
+            <Credential>
+              <option name="username" value="root" />
+            </Credential>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="tableConfigs">
+      <map>
+        <entry key="type">
+          <value>
+            <TableConfig>
+              <option name="basePackage" value="com.demo" />
+              <option name="comment" value="true" />
+              <option name="domainName" value="Type" />
+              <option name="domainPackage" value="com.demo.dao" />
+              <option name="exampleName" value="TypeExample" />
+              <option name="examplePackage" value="com.demo.dao" />
+              <option name="examplePostfix" value="Example" />
+              <option name="mapperName" value="TypeMapper" />
+              <option name="mapperPackage" value="com.demo.dao" />
+              <option name="mapperPostfix" value="Mapper" />
+              <option name="moduleRootPath" value="$PROJECT_DIR$/demo-common-db" />
+              <option name="name" value="type" />
+              <option name="primaryKey" value="id" />
+              <option name="resourcePath" value="src/main/resources" />
+              <option name="sourcePath" value="src/main/java" />
+              <option name="tableName" value="type" />
+              <option name="useExample" value="true" />
+              <option name="xmlPackage" value="mapper" />
+            </TableConfig>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
