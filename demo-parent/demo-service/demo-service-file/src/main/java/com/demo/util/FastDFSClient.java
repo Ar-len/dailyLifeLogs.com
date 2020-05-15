@@ -1,4 +1,6 @@
 package com.demo.util;
+import org.bouncycastle.pqc.crypto.newhope.NHOtherInfoGenerator;
+import org.csource.common.MyException;
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 import org.slf4j.LoggerFactory;
@@ -7,6 +9,8 @@ import org.springframework.core.io.ClassPathResource;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.acl.Group;
+import java.util.logging.SocketHandler;
 
 public class FastDFSClient {
 
@@ -173,5 +177,10 @@ public class FastDFSClient {
         TrackerClient trackerClient = new TrackerClient();
         TrackerServer trackerServer = trackerClient.getConnection();
         return  trackerServer;
+    }
+    
+    public static void main(String[] args) throws IOException, MyException {
+        StorageClient trackerClient = getTrackerClient();
+        System.out.println(trackerClient.get_file_info("group1","M00/00/00/wKgfgF67TuWAMrorAAAqwmct6OE411.jpg"));
     }
 }

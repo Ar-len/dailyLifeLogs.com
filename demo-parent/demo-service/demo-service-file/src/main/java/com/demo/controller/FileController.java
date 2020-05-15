@@ -6,6 +6,7 @@ import entity.Result;
 import entity.StatusCode;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,7 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileController {
 
     @PostMapping("/upload")
-    public Result uploadFile(MultipartFile file){
+    public Result uploadFile(@RequestBody MultipartFile file){
         try{
             //判断文件是否存在
             if (file == null){

@@ -1,18 +1,13 @@
 package com.demo;
 
+import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
-import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
-import com.baomidou.mybatisplus.generator.config.GlobalConfig;
-import com.baomidou.mybatisplus.generator.config.PackageConfig;
-import com.baomidou.mybatisplus.generator.config.StrategyConfig;
-import com.baomidou.mybatisplus.generator.config.rules.DbType;
+import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 /**
  * 自动生成类
- *
- * @author zhaohualuo
- * @date 2019/8/16
+ * @author arlen
  **/
 public class Autogenerator {
 
@@ -24,15 +19,16 @@ public class Autogenerator {
         //全局配置
         GlobalConfig gc = new GlobalConfig();
         String oPath = System.getProperty("user.dir");//得到当前项目的路径
-        gc.setOutputDir(oPath + "/src/main/java");   //生成文件输出根目录
+        System.out.println(oPath);
+        gc.setOutputDir(oPath + "/demo-common-db/src/main/java");   //生成文件输出根目录
         gc.setOpen(false);//生成完成后不弹出文件框
+        gc.setSwagger2(true);
         gc.setFileOverride(true);  //文件覆盖
         gc.setActiveRecord(false);// 不需要ActiveRecord特性的请改为false
         gc.setEnableCache(false);// XML 二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(false);// XML columList
         gc.setAuthor("Arlen");// 作者
-
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
         gc.setControllerName("%sController");
         gc.setServiceName("%sService");
@@ -43,7 +39,7 @@ public class Autogenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setDbType(DbType.MYSQL);   //设置数据库类型，我是postgresql
+        dsc.setDbType(DbType.MYSQL);
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
@@ -71,7 +67,6 @@ public class Autogenerator {
         pc.setEntity("entity");
         pc.setXml("mapper");
         autoGenerator.setPackageInfo(pc);
-
         // 执行生成
         autoGenerator.execute();
     }
