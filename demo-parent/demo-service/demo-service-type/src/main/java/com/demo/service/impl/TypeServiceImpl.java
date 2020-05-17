@@ -3,6 +3,8 @@ package com.demo.service.impl;
 import com.demo.dao.TypeMapper;
 import com.demo.service.TypeService;
 import com.demo.type.pojo.Type;
+import com.demo.utils.JsonUtil;
+import com.demo.utils.RedisClient;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,8 @@ import java.util.List;
 
 @Service
 public class TypeServiceImpl implements TypeService {
+    @Autowired
+    RedisClient redisClient;
     @Autowired
     private TypeMapper typeMapper;
 
@@ -39,10 +43,10 @@ public class TypeServiceImpl implements TypeService {
     public List<Type> findList(Type type) {
         return typeMapper.selectByExample(createExample(type));
     }
-
     @Override
     public List<Type> findAll() {
-        int o=10/0;
+        redisClient.stringSet("types", JsonUtil.objZString(typeMapper.selectAll()));
+        System.out.println(redisClient.stringGet("types"));
         return typeMapper.selectAll();
     }
 

@@ -1,6 +1,7 @@
 package com.demo.controller;
 
 import com.demo.service.TypeService;
+import com.demo.task.AsyncDemo;
 import com.demo.type.pojo.Type;
 import com.github.pagehelper.PageInfo;
 import entity.Result;
@@ -13,6 +14,7 @@ import tk.mybatis.mapper.entity.Example;
 import tk.mybatis.mapper.util.StringUtil;
 
 import java.util.List;
+import java.util.concurrent.Future;
 
 @RestController
 @RequestMapping("/type/")
@@ -20,15 +22,30 @@ import java.util.List;
 public class TypeController {
 
     @Autowired
+    AsyncDemo asyncDemo;
+
+    @Autowired
     private TypeService typeService;
 
     @GetMapping("types")
     public Result<List<Type>> findAll() {
+        long t1 = System.currentTimeMillis();
+        asyncDemo.task1();
+        asyncDemo.task2();
+        Future<String> future = asyncDemo.task3();
+        for (;;){
+            if(future.isDone()){
+                break;
+            }
+        }
+        long t2 = System.currentTimeMillis();
+        System.out.println(t2 - t1+"4");
         return new Result<List<Type>>(true, StatusCode.OK, "成功", typeService.findAll());
     }
 
     @GetMapping("type/{id}")
     public Result<Type> findById(@PathVariable(value = "id")Integer id){
+
         return new Result<Type>(true,StatusCode.OK,"成功",typeService.findById(id));
     }
 

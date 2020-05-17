@@ -1,3 +1,6 @@
+web:
+  upload:
+    path: "F:/Arlen-2019/Ａr-len/dailyLifeLogs.com/demo-parent/demo-service/demo-service-file/src/main/resources/static/"
 spring:
   servlet:
     multipart:
@@ -5,6 +8,8 @@ spring:
       max‐request‐size: 10MB
   application:
     name: file
+  resources:
+    static-locations: classpath:/static/,file:${web.upload.path}
 server:
   port: 8003
 eureka:
