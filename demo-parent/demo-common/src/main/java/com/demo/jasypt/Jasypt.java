@@ -1,14 +1,11 @@
 package com.demo.jasypt;
 
 import org.jasypt.util.text.BasicTextEncryptor;
-import org.junit.Test;
 
 public class Jasypt {
-    @Test
-    public void jasyptTest() {
-        BasicTextEncryptor encryptor = new BasicTextEncryptor();
-//        encryptor.setPassword("123456");
+	public static void main(String[] args) {
+		BasicTextEncryptor encryptor = new BasicTextEncryptor();
 //        System.out.println(encryptor.encrypt("root"));
-//        System.out.println(encryptor.decrypt("EVmNosiJXq3HX5T26u0V/A=="));
-    }
+		System.out.println(encryptor.decrypt("5ihgpFLP88e466+wuFB6Fw=="));
+	}
 }

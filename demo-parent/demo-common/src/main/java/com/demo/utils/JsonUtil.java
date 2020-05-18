@@ -2,9 +2,11 @@ package com.demo.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+@Component
 public class JsonUtil {
     private static ObjectMapper objectMapper = new ObjectMapper();
 

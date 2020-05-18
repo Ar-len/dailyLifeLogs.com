@@ -1,5 +1,4 @@
 package com.demo.util;
-import org.bouncycastle.pqc.crypto.newhope.NHOtherInfoGenerator;
 import org.csource.common.MyException;
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
@@ -9,8 +8,6 @@ import org.springframework.core.io.ClassPathResource;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.security.acl.Group;
-import java.util.logging.SocketHandler;
 
 public class FastDFSClient {
 

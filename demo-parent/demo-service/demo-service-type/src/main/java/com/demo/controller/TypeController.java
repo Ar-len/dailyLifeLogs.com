@@ -4,8 +4,12 @@ import com.demo.service.TypeService;
 import com.demo.task.AsyncDemo;
 import com.demo.type.pojo.Type;
 import com.github.pagehelper.PageInfo;
+import com.sun.javafx.util.Logging;
 import entity.Result;
 import entity.StatusCode;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.amqp.RabbitRetryTemplateCustomizer;
@@ -19,6 +23,7 @@ import java.util.concurrent.Future;
 @RestController
 @RequestMapping("/type/")
 @CrossOrigin
+@Slf4j
 public class TypeController {
 
     @Autowired
@@ -26,7 +31,15 @@ public class TypeController {
 
     @Autowired
     private TypeService typeService;
-
+    @GetMapping("/logdemo")
+    public String log(){
+        log.trace("======trace");
+        log.debug("======debug");
+        log.info("======info");
+        log.warn("======warn");
+        log.error("======error");
+        return "logok";
+    }
     @GetMapping("types")
     public Result<List<Type>> findAll() {
         long t1 = System.currentTimeMillis();

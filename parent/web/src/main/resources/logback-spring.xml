@@ -72,7 +72,7 @@
     <springProfile name="dev">
         <!-- 打印sql -->
         <logger name="com.dailylifelogs.web.mapper" level="DEBUG"/>
-        <root level="INFO">
+        <root level="DEBUG">
             <appender-ref ref="CONSOLE"/>
         </root>
     </springProfile>

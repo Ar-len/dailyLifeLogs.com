@@ -1,8 +1,11 @@
 package com.demo.service.impl;
 
 import com.demo.dao.TypeMapper;
+import com.demo.jasypt.Md5;
 import com.demo.service.TypeService;
 import com.demo.type.pojo.Type;
+import com.demo.utils.JsonUtil;
+import com.demo.utils.RedisClient;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;

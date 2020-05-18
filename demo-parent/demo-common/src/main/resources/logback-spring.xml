@@ -1,15 +1,58 @@
-<configuration scan="true" scanPeriod="60 seconds" debug="true">
-    <!-- 属性文件:在properties/yml文件中找到对应的配置项 -->
-    <springProperty scope="context" name="logging.path" source="logging.path"/>
-    <contextName>demo</contextName>
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--引入默认的一些设置-->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <!--web信息-->
+    <logger name="org.springframework.web" level="info"/>
 
-    <appender name="consoleLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <!--格式化输出（配色）：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
-            <pattern>%yellow(%d{yyyy-MM-dd HH:mm:ss}) %red([%thread]) %highlight(%-5level) %cyan(%logger{50}) - %magenta(%msg) %n
-            </pattern>
-            <charset>UTF-8</charset>
+    <!--写入日志到控制台的appender,用默认的,但是要去掉charset,否则windows下tomcat下乱码-->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
         </encoder>
+    </appender>
+
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <property name="LOG_PATH" value="F:/logs/daily_life_logs"/>
+    <!--写入日志到文件的appender-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名,每天一个文件-->
+            <FileNamePattern>${LOG_PATH}.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+        <!--日志文件最大的大小-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>40MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+
+    <!--异步到文件-->
+    <appender name="asyncFileAppender" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>500</queueSize>
+        <appender-ref ref="FILE"/>
+    </appender>
+
+    <!--写入日志到文件的appender-->
+    <appender name="controllerFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名,每天一个文件-->
+            <FileNamePattern>${LOG_PATH}.controller%d{yyyy-MM-dd}.log</FileNamePattern>
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+        <!--日志文件最大的大小-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
     </appender>
 
     <!--根据日志级别分离日志，分别输出到不同的文件-->
@@ -28,7 +71,7 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--按时间保存日志 修改格式可以按小时、按天、月来保存-->
-            <fileNamePattern>${logging.path}/type.info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/type.info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--保存时长-->
             <MaxHistory>90</MaxHistory>
             <!--文件大小-->
@@ -48,13 +91,41 @@
         <!--滚动策略-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--路径-->
-            <fileNamePattern>${logging.path}/type.error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/type.error.%d{yyyy-MM-dd}.log</fileNamePattern>
             <MaxHistory>90</MaxHistory>
         </rollingPolicy>
     </appender>
-    <root level="info">
-        <appender-ref ref="consoleLog"/>
-        <appender-ref ref="fileInfoLog"/>
-        <appender-ref ref="fileErrorLog"/>
-    </root>
+
+    <logger name="com.demo.controller" level="debug">
+        <appender-ref ref="controllerFile"/>
+    </logger>
+
+    <!--生产环境:打印控制台和输出到文件-->
+    <springProfile name="prod">
+        <root level="info">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="fileInfoLog"/>
+            <appender-ref ref="fileErrorLog"/>
+<!--            <appender-ref ref="asyncFileAppender"/>-->
+        </root>
+    </springProfile>
+
+    <!--开发环境:打印控制台-->
+    <springProfile name="dev">
+        <!-- 打印sql -->
+        <logger name="com.demo.dao" level="DEBUG"/>
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="fileErrorLog"/>
+        </root>
+    </springProfile>
+
+    <!--测试环境:打印控制台-->
+    <springProfile name="test">
+        <root level="info">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="fileInfoLog"/>
+            <appender-ref ref="fileErrorLog"/>
+        </root>
+    </springProfile>
 </configuration>
