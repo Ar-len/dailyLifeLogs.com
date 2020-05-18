@@ -3,8 +3,6 @@ server:
 spring:
   profiles:
     active: dev
-  banner:
-    location: banner.txt
   application:
     name: types
   devtools:
