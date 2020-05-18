@@ -1,61 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df76528f-19c0-4f2b-9f6a-c5ae357184c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-common/src/main/java/com/demo/utils/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-common/src/main/java/com/demo/utils/RedisClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-common/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-common/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-file/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-file/src/main/resources/upload.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/controller/Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/filter/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/intecpter/IntecpterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/intecpter/LoginIntecpter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/listener/ListenerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/listener/ListenerDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/task/AsyncDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/task/TaskDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/resources/trigger.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/test/java/com/demo/service/impl/TypeServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/demo-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/demo-parent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common-db/demo-common-db.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-common-db/demo-common-db.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common-db/src/main/java/com/demo/controller/TypeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common-db/src/main/java/com/demo/entity/Type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common-db/src/main/java/com/demo/mapper/TypeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common-db/src/main/java/com/demo/service/TypeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common-db/src/main/java/com/demo/service/impl/TypeServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common/demo-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-common/demo-common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common/src/main/java/com/demo/exception/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-common/src/main/java/com/demo/exception/BaseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-common/target/classes/com/demo/exception/BaseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo-common/target/classes/com/demo/exception/BaseException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-eureka/demo-eureka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-eureka/demo-eureka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-eureka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-getway/demo-getway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-getway/demo-getway.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service-api/demo-service-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service-api/demo-service-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service-api/demo-service-type-api/demo-service-type-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service-api/demo-service-type-api/demo-service-type-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-file/demo-service-file.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-file/demo-service-file.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-file/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-file/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-file/src/main/java/com/demo/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-file/src/main/java/com/demo/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-file/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-file/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-file/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-file/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/demo-service-type.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/demo-service-type.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/TypeAppliction.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/TypeAppliction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/controller/TypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/java/com/demo/service/impl/TypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/target/classes/com/demo/TypeAppliction.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/target/classes/com/demo/TypeAppliction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/target/classes/com/demo/controller/TypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/target/classes/com/demo/controller/TypeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service-type/target/classes/com/demo/service/impl/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service-type/target/classes/com/demo/service/impl/TypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/demo-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/demo-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-web/demo-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-web/demo-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="df76528f-19c0-4f2b-9f6a-c5ae357184c3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/demo-getway/target/" />
     <ignored path="$PROJECT_DIR$/demo-service/target/" />
@@ -213,7 +159,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo-common/src/main/resources/logback-spring.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="118">
               <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
               <folding>
                 <element signature="n#rollingPolicy#0;n#appender#1;n#configuration#0;n#!!top" />
@@ -587,7 +533,7 @@
       <workItem from="1589540278352" duration="1150000" />
       <workItem from="1589542012594" duration="1966000" />
       <workItem from="1589606321427" duration="1828000" />
-      <workItem from="1589675029520" duration="41712000" />
+      <workItem from="1589675029520" duration="42203000" />
     </task>
     <task id="LOCAL-00001" summary="....">
       <created>1589172653206</created>
@@ -610,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589473902189</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="....">
+      <created>1589731878299</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589731878299</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -646,7 +599,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88091000" />
+    <option name="totallyTimeSpent" value="88582000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -659,7 +612,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49836066" visible="true" weight="0.24659607" />
       <window_info id="Structure" order="1" sideWeight="0.50163937" side_tool="true" weight="0.18381241" />
@@ -685,7 +637,7 @@
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="16" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="ConsoleMavenPlugin" order="17" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.49924356" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -702,6 +654,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="...." />
@@ -1129,7 +1107,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo-common/src/main/resources/logback-spring.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="118">
           <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
           <folding>
             <element signature="n#rollingPolicy#0;n#appender#1;n#configuration#0;n#!!top" />
