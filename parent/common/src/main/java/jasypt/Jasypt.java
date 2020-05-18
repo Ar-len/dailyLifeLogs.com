@@ -8,6 +8,11 @@ public class Jasypt {
     public void jasyptTest() {
         BasicTextEncryptor encryptor = new BasicTextEncryptor();
 //        System.out.println(encryptor.encrypt("root"));
-//        System.out.println(encryptor.decrypt("5ihgpFLP88e466+wuFB6Fw=="));
+        System.out.println(encryptor.decrypt("5ihgpFLP88e466+wuFB6Fw=="));
+    }
+    public static main(String[] args){
+        BasicTextEncryptor encryptor = new BasicTextEncryptor();
+//        System.out.println(encryptor.encrypt("root"));
+        System.out.println(encryptor.decrypt("5ihgpFLP88e466+wuFB6Fw=="));
     }
 }

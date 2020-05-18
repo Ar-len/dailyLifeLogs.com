@@ -9,3 +9,7 @@ mybatis-plus:
     sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
     logic-delete-value: 1
     logic-not-delete-value: 0
+
+jasypt:
+  encryptor:
+    password: 123456

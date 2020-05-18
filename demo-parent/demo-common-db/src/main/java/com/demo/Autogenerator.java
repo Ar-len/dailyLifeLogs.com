@@ -45,7 +45,10 @@ public class Autogenerator {
         dsc.setPassword("123456");
         dsc.setUrl("jdbc:mysql:///daily_life_logs_base?characterEncoding=utf8&useAffectedRows=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai");  //指定数据库
         autoGenerator.setDataSource(dsc);
-
+    
+        TemplateConfig templateConfig = new TemplateConfig();
+        templateConfig.setXml(null);
+        autoGenerator.setTemplate(templateConfig);
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);      // 表名生成策略
