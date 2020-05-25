@@ -1,0 +1,30 @@
+{
+  "groups": [
+    {
+      "name": "primarydb",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.demo.config.PrimaryDataSourceJTAConfig",
+      "sourceMethod": "primaryDataSource()"
+    },
+    {
+      "name": "secondarydb",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.demo.config.SecondaryDataSourceJTAConfig",
+      "sourceMethod": "secondaryDataSource()"
+    },
+    {
+      "name": "spring.datasource.primary",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.demo.config.PrimaryDataSourceConfig",
+      "sourceMethod": "testDataSource()"
+    },
+    {
+      "name": "spring.datasource.secondary",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.demo.config.SecondaryDataSourceConfig",
+      "sourceMethod": "testDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

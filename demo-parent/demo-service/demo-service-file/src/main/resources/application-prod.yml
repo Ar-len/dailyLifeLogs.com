@@ -1,0 +1,23 @@
+web:
+  upload:
+    path: "F:/Arlen-2019/Ａr-len/dailyLifeLogs.com/demo-parent/demo-service/demo-service-file/src/main/resources/static/"
+spring:
+  servlet:
+    multipart:
+      max‐file‐size: 10MB
+      max‐request‐size: 10MB
+  application:
+    name: file
+  resources:
+    static-locations: classpath:/static/,file:${web.upload.path}
+server:
+  port: 8003
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://127.0.0.1:8001/eureka
+  instance:
+    prefer‐ip‐address: true
+feign:
+  hystrix:
+    enabled: true
