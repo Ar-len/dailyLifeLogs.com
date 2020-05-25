@@ -7,11 +7,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-base/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/demo-base/pom.xml" />
         <option value="$PROJECT_DIR$/demo-service/demo-service-base/pom.xml" />
       </set>
     </option>

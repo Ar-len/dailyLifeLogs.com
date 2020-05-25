@@ -12,7 +12,6 @@
     <modules>
         <module>demo-service-type</module>
         <module>demo-service-file</module>
-        <module>demo-service-base</module>
     </modules>
 
     <artifactId>demo-service</artifactId>
