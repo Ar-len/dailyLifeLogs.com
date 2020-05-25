@@ -6,13 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-eureka" />
-        <module name="demo-base" />
-        <module name="demo-common" />
-        <module name="demo-common-db" />
-        <module name="renren-fast" />
         <module name="demo-service-type-api" />
+        <module name="demo-common-db" />
+        <module name="demo-eureka" />
         <module name="demo-service-type" />
+        <module name="demo-common" />
         <module name="demo-service-file" />
       </profile>
     </annotationProcessing>

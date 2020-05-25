@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/demo-base/demo-base.iml" filepath="$PROJECT_DIR$/demo-base/demo-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-common/demo-common.iml" filepath="$PROJECT_DIR$/demo-common/demo-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-common-db/demo-common-db.iml" filepath="$PROJECT_DIR$/demo-common-db/demo-common-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-eureka/demo-eureka.iml" filepath="$PROJECT_DIR$/demo-eureka/demo-eureka.iml" />
@@ -15,7 +14,6 @@
       <module fileurl="file://$PROJECT_DIR$/demo-service-api/demo-service-type-api/demo-service-type-api.iml" filepath="$PROJECT_DIR$/demo-service-api/demo-service-type-api/demo-service-type-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-web/demo-web.iml" filepath="$PROJECT_DIR$/demo-web/demo-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/demoparent/demoparent.iml" filepath="$PROJECT_DIR$/demoparent/demoparent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/demo-base/renren-fast.iml" filepath="$PROJECT_DIR$/demo-base/renren-fast.iml" />
     </modules>
   </component>
 </project>
